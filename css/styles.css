@@ -13,15 +13,73 @@
   --light-bg-cl: #f5f4fa;
   --active-bg-btn-hero: #188ce8;
   --filter-btn-bg-cl: #f5f4fa;
+  --command-section-wrapper-cl: #EEEEEE;
 }
 
 /* Reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .link {
   text-decoration: none;
   color: currentColor;
+}
+
+/* Base styles */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid blue;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  outline: 2px solid red;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+img {
+  display: block;
+}
+
+.title-section {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-txt-cl);
+  margin-bottom: 50px;
 }
 
 /* Page */
@@ -32,14 +90,43 @@ body {
 }
 
 /* Header */
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+/* Header FlexBox */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.main-nav {
+  display: flex;
+}
+.main-nav-items {
+  margin-left: 93px;
+  display: flex;
+  gap: 50px;
+}
+.main-nav-call {
+  display: inline-block;
+  display: flex;
+  margin-left: auto;
+  gap: 50px;
+}
+
 /* Header logo */
 .logo-link {
+  display: inline-block;
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: var(--accent-txt-cl);
+  margin-right: auto;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .logo-accent {
   color: var(--title-txt-cl);
@@ -47,11 +134,14 @@ body {
 
 /* Header navigation */
 .main-nav-link {
+  display: inline-block;
   color: var(--title-txt-cl);
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .main-nav-link:hover,
 .main-nav-link:focus,
@@ -64,30 +154,18 @@ body {
 }
 /* Header contacts */
 .main-nav-call-link {
+  display: inline-block;
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 /* Section Hero */
 .section-hero {
   background-color: var(--dark-bg-cl);
-}
-.btn-hero {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  color: var(--white-txt-cl);
-  background-color: var(--accent-txt-cl);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  cursor: pointer;
-}
-.btn-hero:hover,
-.btn-hero:focus {
-  background-color: var(--active-bg-btn-hero);
 }
 .main-title {
   font-weight: 900;
@@ -99,7 +177,39 @@ body {
   color: var(--white-txt-cl);
 }
 
+.btn-hero {
+  min-width: 200px;
+  min-height: 50px;
+  padding-top: 10px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  color: var(--white-txt-cl);
+  background-color: var(--accent-txt-cl);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+  cursor: pointer;
+}
+.btn-hero:hover,
+.btn-hero:focus {
+  background-color: var(--active-bg-btn-hero);
+}
+
 /* Сharacteristics section */
+
+.characteristic-section-container {
+}
+.characteristic-section-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* потрібно перевірити чи давати li characteristic-section-list класи */
+}
 
 .subtitle-characteristics {
   font-weight: 700;
@@ -108,25 +218,48 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-txt-cl);
+  width: 270px;
+  margin-bottom: 10px;
 }
-.desc {
+.characteristics-desc {
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
+  width: 270px;
 }
 
-/* Images section */
+/* About us section */
 
-.title-section {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: calc(42 / 36);
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--title-txt-cl);
+.About-us-section {
+  padding-top: 0;
+}
+
+.About-us-list {
+  display: flex;
+  gap: 30px;
+}
+
+.About-us-title {
 }
 
 /* Command section */
+/* Command section flex */
+
+.command-section-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.command-section-wrapper {
+  padding-top: 30px;
+  padding-right: 5px;
+  padding-bottom: 30px;
+  padding-left: 5px;
+  background: var(--white-txt-cl);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 
 .command-section {
   background-color: var(--light-bg-cl);
@@ -138,6 +271,7 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-txt-cl);
+  margin-bottom: 10px;
 }
 .command-role {
   line-height: calc(19 / 16);
@@ -146,8 +280,18 @@ body {
 }
 
 /* Portfolio section */
-
+.portfolio-section-btn-list {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
 .filter-btn {
+  min-height: 38px;
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -156,6 +300,7 @@ body {
   color: var(--title-txt-cl);
   background-color: var(--filter-btn-bg-cl);
   border-radius: 4px;
+  border: transparent;
   cursor: pointer;
 }
 .filter-btn-current {
@@ -167,6 +312,22 @@ body {
 }
 
 /* Portfolio section */
+
+.portfolio-section-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-section-wrapper {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  background: var(--white-txt-cl);
+  border: 1px solid var(--command-section-wrapper-cl);
+  border-top: none;
+}
 
 .subtitle-potfolio {
   font-weight: 700;
@@ -196,6 +357,7 @@ body {
   color: var(--white-txt-cl);
 }
 .footer-contacts {
+  font-style: normal;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
