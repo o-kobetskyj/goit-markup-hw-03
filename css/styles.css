@@ -179,6 +179,8 @@ body {
 .section-hero {
   background-color: var(--dark-bg-cl);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
   
 }
 .main-title {
