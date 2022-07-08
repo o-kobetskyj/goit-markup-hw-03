@@ -1,12 +1,12 @@
+.btn-hero
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+--shadow-btn-box-cl: rgba(0, 0, 0, 0.15)
+
+.command-section-wrapper
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
-    .btn-hero 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  .command-section-wrapper {
- 
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-
-    
+--shadow-command-a-cl: rgba(0, 0, 0, 0.12);
+--shadow-command-b-cl: rgba(0, 0, 0, 0.14);
+--shadow-command-c-cl: rgba(0, 0, 0, 0.2);
