@@ -20,16 +20,18 @@
   --portfolio-section-wrapper-cl: #eeeeee;
   --header-border-cl: #ececec;
   --btn-border-cl: transparent;
-  /* Others */
+  /* Indent and items */
   --indent-header: 50px;
   --indent-main: 30px;
   --indent-btn: 8px;
-  --items-main-nav: 3;
-  --items-main-nav-call: 2;
-
+  --items-characteristic-section: 4;
+  --items-about-us: 3;
+  --items-command: 4;
+  --items-portfolio: 3;
 }
 
 /* Reset styles */
+
 h1,
 h2,
 h3,
@@ -39,7 +41,6 @@ h6,
 p {
   margin: 0;
 }
-
 .list {
   list-style: none;
   padding: 0;
@@ -50,22 +51,26 @@ p {
   color: currentColor;
 }
 
+/* Card Set */
+ 
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent-main);
+}
+
 /* Base styles */
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-
-  outline: 2px solid blue;
 }
-
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-
-  outline: 2px solid red;
 }
 .visually-hidden {
   position: absolute;
@@ -83,7 +88,6 @@ p {
 img {
   display: block;
 }
-
 .title-section {
   font-weight: 700;
   font-size: 36px;
@@ -106,8 +110,6 @@ body {
 .header {
   border-bottom: var(--header-border-cl);
 }
-
-/* Header FlexBox */
 .header-container {
   display: flex;
   align-items: center;
@@ -181,7 +183,6 @@ body {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  
 }
 .main-title {
   width: 696px;
@@ -194,9 +195,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-txt-cl);
-  outline: 2px solid #212121;
 }
-
 .btn-hero {
   min-width: 200px;
   min-height: 50px;
@@ -222,19 +221,12 @@ body {
 
 /* Сharacteristics section */
 
-.characteristic-section-container {
-}
-.characteristic-section-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent-main);
-}
-/* потрібно перевірити чи давати li з characteristic-section-list класи */
-
 .characteristic-section-items {
-  flex-basis: calc((100% - 30px * 3) / 4);
+  flex-basis: calc(
+    (100% - var(--indent-main) * (var(--items-characteristic-section) - 1)) /
+      var(--items-characteristic-section)
+  );
 }
-
 .subtitle-characteristics {
   font-weight: 700;
   font-size: 14px;
@@ -252,22 +244,23 @@ body {
 
 /* About us section */
 
-.About-us-section {
+.about-us-section {
   padding-top: 0;
 }
-
-.About-us-list {
-  display: flex;
-  gap: var(--indent-main);
+.about-us-items {
+  flex-basis: calc(
+    (100% - var(--indent-main) * (var(--items-about-us) - 1)) /
+      var(--items-about-us)
+  );
 }
 
 /* Command section */
-/* Command section flex */
 
-.command-section-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent-main);
+.command-section-items {
+  flex-basis: calc(
+    (100% - var(--indent-main) * (var(--items-command) - 1)) /
+      var(--items-command)
+  );
 }
 .command-section-wrapper {
   padding-top: 30px;
@@ -280,7 +273,6 @@ body {
     0px 2px 1px var(--shadow-command-c-cl);
   border-radius: 0px 0px 4px 4px;
 }
-
 .command-section {
   background-color: var(--light-bg-cl);
 }
@@ -300,6 +292,7 @@ body {
 }
 
 /* Portfolio section */
+
 .portfolio-section-btn-list {
   display: flex;
   gap: var(--indent-btn);
@@ -331,14 +324,14 @@ body {
   background-color: var(--active-bg-btn-hero);
 }
 
-/* Portfolio section */
+/* Portfolio section cardset */
 
-.portfolio-section-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent-main);
+.portfolio-section-items {
+  flex-basis: calc(
+    (100% - var(var(--indent-main)) * (var(--items-portfolio) - 1)) /
+      var(--items-portfolio)
+  );
 }
-
 .portfolio-section-wrapper {
   padding-top: 20px;
   padding-right: 24px;
@@ -348,7 +341,6 @@ body {
   border: 1px solid var(--portfolio-section-wrapper-cl);
   border-top: none;
 }
-
 .subtitle-potfolio {
   font-weight: 700;
   font-size: 18px;
@@ -376,7 +368,6 @@ body {
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 0;
-
 }
 .logo-accent-footer {
   color: var(--white-txt-cl);
