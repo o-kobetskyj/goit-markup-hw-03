@@ -52,7 +52,7 @@ p {
 }
 
 /* Card Set */
- 
+
 .card-set {
   display: flex;
   flex-wrap: wrap;
@@ -108,7 +108,7 @@ body {
 /* Header */
 
 .header {
-  border-bottom: var(--header-border-cl);
+  border-bottom: 1px solid var(--header-border-cl);
 }
 .header-container {
   display: flex;
@@ -347,6 +347,7 @@ body {
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: var(--title-txt-cl);
+  margin-bottom: 4px;
 }
 .portfolio-desc {
   line-height: calc(30 / 16);
@@ -358,9 +359,7 @@ body {
 .footer {
   background-color: var(--dark-bg-cl);
   padding-top: 60px;
-  padding-right: 15px;
   padding-bottom: 60px;
-  padding-left: 15px;
 }
 .footer-logo {
   margin-bottom: 20px;
